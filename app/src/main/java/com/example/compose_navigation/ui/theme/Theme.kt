@@ -20,6 +20,7 @@ private val DarkColorScheme = darkColorScheme(
     secondary = PurpleGrey80,
     tertiary = Pink80
 )
+const val DEFAULT_PADDING = 44
 
 private val LightColorScheme = lightColorScheme(
     primary = Purple40,

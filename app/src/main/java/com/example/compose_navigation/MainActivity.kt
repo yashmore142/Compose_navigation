@@ -14,12 +14,14 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.compose_navigation.ui.AppNavigation
+import com.example.compose_navigation.ui.animation_bottom_bar.MainBottomScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AppNavigation()
+          //  AppNavigation()
+            MainBottomScreen()
         }
     }
 }
