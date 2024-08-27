@@ -5,6 +5,7 @@ import android.graphics.ColorMatrixColorFilter
 import android.graphics.RenderEffect
 import android.graphics.Shader
 import android.os.Build
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
@@ -45,6 +46,7 @@ import androidx.compose.ui.graphics.asComposeRenderEffect
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -173,7 +175,12 @@ fun CustomBottomNavigation() {
             .padding(horizontal = 40.dp)
     ) {
         listOf(Icons.Filled.Home, Icons.Filled.Settings).map { image ->
-            IconButton(onClick = { }) {
+            IconButton(onClick = {
+                if (image == Icons.Filled.Home) {
+                } else {
+
+                }
+            }) {
                 Icon(imageVector = image, contentDescription = null, tint = Color.White)
             }
         }
@@ -272,5 +279,5 @@ fun AnimatedFab(
 @Composable
 @Preview(device = "id:pixel_4a", showBackground = true, backgroundColor = 0xFF3A2F6E)
 private fun MainScreenPreview() {
-        MainBottomScreen()
+    MainBottomScreen()
 }
